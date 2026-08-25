@@ -385,14 +385,6 @@ nav.tabs button.destacada[aria-current="page"]{border-bottom-color:#fff}
 .fila-tab textarea:focus{border-color:var(--ges);outline:none}
 .fila-tab details,.crit details{margin-top:9px}
 .fila-tab summary,.crit summary{cursor:pointer;font-size:13.5px;color:var(--int);font-weight:600}
-.crit{border-top:1px solid var(--linea);padding:14px 0}
-.crit:first-child{border-top:0;padding-top:0}
-.crit-cab{display:flex;gap:9px;align-items:baseline;flex-wrap:wrap}
-.crit-cab b{font-size:15.5px}
-.crit-cab .peso{background:var(--ges);color:#fff;border-radius:99px;padding:1px 10px;font-size:12.5px;font-weight:700}
-.crit-cab .donde{font-size:12.5px;color:var(--tinta-3)}
-.crit .n4{margin:7px 0 0;font-size:14.5px}
-.crit details p{font-size:14px;color:var(--tinta-2);margin:7px 0 0}
 .reparto{margin-top:14px}
 @media(max-width:600px){.hero-ent{padding:22px 18px}.hero-ent h2{font-size:21px}}
 
@@ -405,18 +397,114 @@ nav.tabs button.destacada[aria-current="page"]{border-bottom-color:#fff}
 .videos{margin-top:16px;gap:16px}
 .video-curso .video-caja{margin-bottom:6px}
 .video-curso .pista-campo{margin-top:0}
-.ejemplo{margin-top:16px;border:1.5px solid var(--ges);border-radius:10px;padding:13px 15px;background:var(--ges-suave)}
-.ejemplo > summary{font-weight:700;color:#8A2F18;font-size:15px;cursor:pointer}
 .ej-fila{background:#fff;border-radius:9px;padding:12px 14px;margin-top:12px}
 .ej-fila > b{display:block;font-size:15.5px;margin-bottom:8px}
 .ej-fila p{margin:0 0 9px;font-size:14.4px}
 .ej-fila p:last-child{margin-bottom:0}
 .ej-fila p span{display:block;font-size:11.5px;text-transform:uppercase;letter-spacing:.7px;font-weight:700;margin-bottom:2px}
-.ej-ficha span{color:var(--tinta-3)}
 .ej-salto{color:var(--tinta-2)}
 .ej-salto span{color:var(--int)}
 .ej-muestra{background:var(--cre-suave);border-radius:7px;padding:9px 11px}
 .ej-muestra span{color:var(--cre-texto)}
+
+.lista-num{list-style:none;counter-reset:pn;margin:12px 0 0;padding:0}
+.lista-num li{counter-increment:pn;position:relative;padding-left:38px;margin-bottom:11px;font-size:15px}
+.lista-num li::before{content:counter(pn);position:absolute;left:0;top:0;width:26px;height:26px;border-radius:50%;
+  background:var(--int);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px}
+.lista-num li b{display:block}
+.lista-num li span{color:var(--tinta-2)}
+.captura{margin:14px 0;border:1px solid var(--linea);border-radius:10px;padding:12px 14px;background:var(--fondo)}
+.captura .cap-tit{margin:0 0 10px;font-size:14.6px}
+.captura img{width:100%;max-width:520px;display:block;border:1px solid var(--linea);border-radius:8px;background:#fff}
+.captura .cap-pie{margin:7px 0 0;font-size:12px;color:var(--tinta-3)}
+.ej-bloque{margin-top:16px}
+.btn-ejemplo{
+  background:var(--cre);color:var(--cre-texto);border:2px solid #B9EF4F;border-radius:10px;
+  padding:13px 22px;font-weight:800;font-size:15.5px;box-shadow:0 0 0 6px rgba(207,250,122,.35);
+  transition:box-shadow .18s ease,transform .18s ease;
+}
+.btn-ejemplo:hover{box-shadow:0 0 0 10px rgba(207,250,122,.45);transform:translateY(-1px)}
+.ej-caja{margin-top:16px}
+.ej-parte{background:var(--ges-suave);border-left:4px solid var(--ges);border-radius:0 9px 9px 0;padding:12px 14px;margin:18px 0 12px;position:relative}
+.ej-parte:first-child{margin-top:0}
+.ej-parte .ej-num{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;
+  background:var(--ges);color:#fff;font-weight:700;font-size:13px;margin-right:8px;vertical-align:middle}
+.ej-parte b{font-size:15.5px}
+.ej-parte p{margin:6px 0 0;font-size:14.4px;color:var(--tinta-2)}
+.ej-ficha-caja{max-height:520px;overflow:auto;border:1.5px solid var(--linea);border-radius:10px;background:#fff;padding:10px}
+.ej-ficha-caja .ficha{box-shadow:none;border:0;margin:0}
+.ej-fila{background:#fff;border:1px solid var(--linea);border-radius:9px;padding:12px 14px;margin-top:12px}
+.ej-fila > b{display:block;font-size:15.5px;margin-bottom:8px}
+.ej-fila p{margin:0 0 9px;font-size:14.4px}
+.ej-fila p:last-child{margin-bottom:0}
+.ej-fila p span{display:block;font-size:11.5px;text-transform:uppercase;letter-spacing:.7px;font-weight:700;margin-bottom:2px}
+.ej-src span{color:var(--tinta-3)}
+.ej-salto{color:var(--tinta-2)}
+.ej-salto span{color:var(--int)}
+.ej-muestra{background:var(--cre-suave);border-radius:7px;padding:9px 11px}
+.ej-muestra span{color:var(--cre-texto)}
+
+/* ---------- Aviso de andamiaje ---------- */
+.franja-aviso{
+  background:#7A2410;color:#FFE9E2;border-radius:10px;padding:14px 16px;font-size:14.6px;line-height:1.5;
+  border-left:6px solid var(--ges);
+}
+.franja-aviso b{color:#fff}
+.franja-aviso > b:first-child{display:block;font-size:16px;margin-bottom:5px}
+.contraste{margin-top:12px;gap:14px}
+.con-caja{border-radius:10px;padding:13px 15px;border:1.5px solid var(--linea);background:#fff}
+.con-caja .con-et{display:block;font-size:11.5px;text-transform:uppercase;letter-spacing:.8px;font-weight:700;margin-bottom:4px}
+.con-caja b{display:block;font-size:16px;margin-bottom:5px}
+.con-caja p{margin:0;font-size:14.2px;color:var(--tinta-2)}
+.con-caja.no{border-color:var(--ges);background:var(--ges-suave)}
+.con-caja.no .con-et{color:#8A2F18}
+.con-caja.si{border-color:var(--int);background:var(--int-05)}
+.con-caja.si .con-et{color:var(--int)}
+.ej-ficha-caja{position:relative}
+.marca-andamiaje{
+  position:sticky;top:0;z-index:2;display:block;background:#7A2410;color:#fff;font-size:11.5px;font-weight:700;
+  letter-spacing:.7px;text-transform:uppercase;padding:6px 10px;border-radius:6px;margin-bottom:8px;text-align:center;
+}
+/* ---------- Rúbrica ---------- */
+.rubrica{border:1.5px solid var(--linea);border-radius:12px;overflow:hidden;background:#fff}
+.rub-cab,.rub-pie{display:flex;justify-content:space-between;align-items:center;padding:9px 16px;
+  font-size:11.8px;text-transform:uppercase;letter-spacing:.8px;font-weight:700;color:var(--tinta-3);background:var(--linea-2)}
+.rub-pie{border-top:1.5px solid var(--linea);text-transform:none;font-size:13.5px;color:var(--tinta);letter-spacing:0}
+.rub-pie .peso{background:var(--int);color:#fff;border-radius:99px;padding:3px 12px;font-size:13px;font-weight:700;letter-spacing:0}
+details.crit{border-top:1px solid var(--linea)}
+details.crit:first-of-type{border-top:0}
+details.crit > summary{
+  display:flex;align-items:center;gap:12px;padding:13px 16px;cursor:pointer;list-style:none;
+  transition:background .15s ease;
+}
+details.crit > summary::-webkit-details-marker{display:none}
+details.crit > summary::after{
+  content:"";width:9px;height:9px;flex:none;border-right:2px solid var(--tinta-3);border-bottom:2px solid var(--tinta-3);
+  transform:rotate(45deg);margin-left:4px;transition:transform .2s ease;
+}
+details.crit[open] > summary::after{transform:rotate(-135deg)}
+details.crit > summary:hover{background:var(--int-05)}
+details.crit[open] > summary{background:var(--int-05)}
+details.crit .crit-n{width:26px;height:26px;flex:none;border-radius:8px;background:var(--int);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13.5px}
+details.crit .crit-t{flex:1 1 auto;min-width:0;font-weight:600;font-size:15px;line-height:1.3}
+details.crit .crit-t em{display:block;font-style:normal;font-size:12px;font-weight:400;color:var(--tinta-3);margin-top:2px}
+details.crit .peso{flex:none;background:var(--ges);color:#fff;border-radius:99px;padding:3px 11px;font-size:12.5px;font-weight:700}
+.crit-cuerpo{padding:4px 16px 16px 54px;background:var(--int-05)}
+.niv{border-left:4px solid var(--linea);padding:8px 0 8px 12px;margin-bottom:9px;background:#fff;border-radius:0 8px 8px 0}
+.niv:last-child{margin-bottom:0}
+.niv span{display:block;font-size:11.5px;text-transform:uppercase;letter-spacing:.7px;font-weight:700;margin-bottom:3px}
+.niv p{margin:0;font-size:14.2px;color:var(--tinta-2)}
+.niv.n4{border-left-color:#8FCF2A;background:var(--cre-suave)}
+.niv.n4 span{color:var(--cre-texto)}
+.niv.n3{border-left-color:var(--mol)}
+.niv.n3 span{color:#3F5A8F}
+.niv.n2{border-left-color:var(--int-15)}
+.niv.n2 span{color:var(--tinta-3)}
+.niv.n1{border-left-color:var(--ges)}
+.niv.n1 span{color:#8A2F18}
+.crit-cuerpo .tip{margin-top:10px}
+@media(max-width:560px){.crit-cuerpo{padding-left:16px}details.crit > summary{padding:12px 12px}}
 </style>
 </head>
 <body>
@@ -1096,6 +1184,70 @@ const T_REFLEX = [
 // con la parte voluntaria de esta herramienta. La de la derecha es una
 // redacción de muestra elaborada por esta herramienta para ilustrar el salto.
 // ---------------------------------------------------------------------------
+const EJEMPLO_DATOS = {
+  "titulo": "¿Por qué una IA puede dar respuestas diferentes cuando le hacemos la misma pregunta varias veces?",
+  "etapa": "primaria",
+  "edad": "11 a 12 años",
+  "curso": "5.º o 6.º de Educación Primaria",
+  "area": "Conocimiento del Medio Natural, Social y Cultura",
+  "sesiones": "2 sesiones de 50 minutos",
+  "partida": "Quiero que el alumnado comprenda que la IA no siempre da la misma respuesta ni tiene siempre razón, y que aprenda a comparar, cuestionar y comprobar la información que ofrece antes de aceptarla como verdadera.",
+  "descripcion": "El alumnado trabajará con una IA generadora de imágenes para comprobar si una IA produce siempre el mismo resultado ante una misma petición. En primer lugar, el docente presentará una imagen y formulará con todo el grupo un mismo prompt sencillo y concreto. Cada alumno o pareja introducirá ese mismo prompt en la herramienta y observará el resultado obtenido.\n\nA continuación, compararán las imágenes entre sí y registrarán qué elementos coinciden y cuáles son diferentes. Después, repetirán la generación con el mismo prompt para comprobar si el resultado vuelve a cambiar. Finalmente, analizarán las imágenes y decidirán si el resultado se puede aceptar, si necesita revisarse o si debería rechazarse, explicando el motivo.\n\nLa actividad se realizará en dos sesiones de 50 minutos, utilizando ordenadores o tabletas, una herramienta de generación de imágenes mediante IA, una ficha de observación y los prompts preparados previamente por el docente. Se trabajará principalmente en parejas para facilitar la comparación y la puesta en común.\n\nEl objetivo es que el alumnado compruebe mediante una experiencia directa que la IA generativa puede producir resultados diferentes y que estos deben ser revisados críticamente antes de aceptarlos.",
+  "agrupamiento": "Trabajo en parejas, para que puedan observar, comparar y debatir los resultados. La puesta en común final se realizará con todo el grupo-clase.",
+  "producto": "Una ficha de comparación en la que cada pareja recogerá las imágenes generadas, señalará semejanzas y diferencias y explicará qué resultado aceptaría, cuál revisaría o cuál rechazaría y por qué. La reflexión final se pondrá en común con el grupo.",
+  "recursos": "Ordenador o tableta con acceso a Internet.\nHerramienta de generación de imágenes mediante IA.\nUn mismo prompt preparado por el docente para todo el alumnado.\nFicha de observación y comparación.\nProyector o pizarra digital para la puesta en común.\nDos sesiones de 50 minutos.\nNo se requiere que el alumnado tenga conocimientos previos sobre IA ni que modifique las instrucciones de la herramienta.",
+  "ambito": "INT",
+  "comp": 3,
+  "nivel": "basico",
+  "con": [
+    "3.1",
+    "3.2",
+    "1.1",
+    "3.3",
+    "3.4",
+    "4.2",
+    "4.3",
+    "4.1"
+  ],
+  "hab": [
+    "pensamiento crítico",
+    "colaboración",
+    "solución de problemas",
+    "pensamiento computacional",
+    "comunicación",
+    "autoconciencia y conciencia social",
+    "creatividad"
+  ],
+  "act": [
+    "responsabilidad",
+    "reflexión",
+    "curiosidad",
+    "adaptabilidad"
+  ],
+  "etica": {
+    "usoAlumnado": "Sí, cada alumno o grupo usará la herramienta",
+    "edadDatos": "La actividad se realizará bajo la supervisión directa del docente. El alumnado no creará cuentas personales ni introducirá datos personales en la herramienta. Se utilizará una herramienta cuya edad mínima y condiciones de uso permitan este uso educativo; si no lo permiten, el docente realizará las generaciones desde una cuenta institucional o de adulto y el alumnado analizará los resultados.",
+    "datos": "Solo se introducirán prompts preparados para la actividad, sin nombres, fotografías, voces, datos personales, información familiar, ubicación ni ningún otro dato que permita identificar al alumnado. No se introducirán imágenes de menores ni trabajos que contengan información personal.",
+    "citar": "En la ficha final indicarán que las imágenes han sido generadas con IA y señalarán qué herramienta se ha utilizado. No presentarán la imagen generada como una creación exclusivamente propia.",
+    "verificar": "El alumnado comparará las imágenes generadas entre sí y comprobará si responden realmente a la petición realizada. El docente guiará la revisión y explicará que una imagen generada por IA no es necesariamente correcta o fiel a lo solicitado.",
+    "alternativa": "Sí. Podríamos realizar la actividad utilizando dibujos realizados por los propios alumnos a partir de una misma descripción. Sin embargo, utilizamos la IA porque permite observar de forma directa y rápida cómo una misma petición puede producir resultados diferentes, lo que hace más visible el fenómeno que queremos analizar.",
+    "bienestar": "Se evitará que el alumnado comparta datos personales o imágenes propias y se limitará el uso de la herramienta a una actividad concreta y supervisada. También se evitará generar contenidos que puedan resultar ofensivos, violentos o inapropiados. El objetivo será trabajar con la IA de forma segura, crítica y responsable, sin fomentar un uso excesivo de la herramienta."
+  },
+  "curriculo": "Área: Conocimiento del Medio Natural, Social y Cultural\nCurso: 6.º de Educación Primaria / tercer ciclo\n\nCompetencia específica 1:\n\nUtilizar dispositivos y recursos digitales de forma segura, responsable y eficiente, para buscar información, comunicarse y trabajar de manera individual, en equipo y en red, y para reelaborar y crear contenido digital.\n\nCriterio de evaluación 1.1:\n\nUtilizar recursos digitales de acuerdo con las necesidades del contexto educativo de forma segura y eficiente, buscando información, comunicándose y trabajando de forma individual, en equipo y en red, reelaborando y creando contenidos digitales sencillos.\n\nCompetencia clave:\nCompetencia Digital (CD).\n\nEspecialmente conectaría con CD2 y CD4: creación/reelaboración de contenidos digitales y uso crítico, seguro y responsable de las tecnologías. El currículo define expresamente la competencia digital en términos de uso seguro, crítico y responsable de las tecnologías.  \n\nEl alumnado no utiliza la IA simplemente para crear una imagen bonita. La utiliza como objeto de experimentación: genera imágenes, compara los resultados y evalúa si debe aceptar, revisar o rechazar lo que produce la herramienta.\n\nEso encaja especialmente bien con vuestro INT-3 “Evaluar si los resultados de la IA se deben aceptar, revisar o rechazar” y con el enfoque de Interactuar con la IA.",
+  "ref": {
+    "contexto": "Tienen un nivel básico. El alumnado piensa que la IA tiene siempre razón y es inteligente. ",
+    "partida": "La necesidad surge de que el alumnado utiliza cada vez más herramientas de inteligencia artificial, pero no siempre comprende que una IA puede ofrecer respuestas diferentes o incluso incorrectas. Por ello, se plantea la necesidad de desarrollar su pensamiento crítico y su competencia digital, aprendiendo a cuestionar, comparar y verificar la información que reciben de estas herramientas.",
+    "ambito": "Porque la competencia digital y el uso crítico de la información son especialmente importantes para el alumnado de 11–12 años, que ya utiliza herramientas digitales con frecuencia. En este momento del curso, el grupo está preparado para experimentar con la IA, comparar sus respuestas y empezar a cuestionar y verificar la información que recibe, de una forma práctica y cercana a su realidad.",
+    "competencia": "El alumnado formulará una misma petición a una IA de generación de imágenes, observará y comparará los diferentes resultados, identificará semejanzas y diferencias, explicará posibles causas de las variaciones y valorará críticamente las imágenes obtenidas.",
+    "nivel": "He observado que el alumnado utiliza herramientas digitales y busca información en Internet con frecuencia, pero todavía tiende a aceptar como válidas las respuestas o imágenes que encuentra sin comprobarlas. En actividades anteriores, cuando una herramienta digital ofrecía un resultado, pocos alumnos se planteaban por qué podía ser diferente o si era necesario verificarlo. Esta observación me lleva a situar al grupo en un nivel inicial de la competencia para evaluar críticamente los resultados de la IA.",
+    "cha": "Conocimiento: saber que una IA puede generar resultados diferentes y no siempre correctos.\nHabilidad: comparar y evaluar los resultados de la IA antes de aceptarlos.\nActitud: mantener una actitud crítica, curiosa y abierta, sin aceptar automáticamente lo que produce la IA.\n\nLos conservaría porque juntos permiten que el alumnado no sea un usuario pasivo de la IA, sino que aprenda a cuestionar, comprobar y tomar sus propias decisiones.",
+    "diseno": "Tendré que simplificar el lenguaje y las instrucciones, adaptándolos a alumnado de 11–12 años, y plantear la actividad de forma práctica y visual, utilizando una herramienta de generación de imágenes que puedan manejar con facilidad. También adaptaré el número de ejemplos y el tiempo disponible a dos sesiones de 50 minutos, asegurando que todo el alumnado pueda experimentar y comparar los resultados.",
+    "etica": "Les explicaré que usamos la IA como una herramienta para investigar y aprender, no para que haga el trabajo por nosotros. En esta actividad la utilizaremos para comprobar que, ante una misma petición, puede generar imágenes diferentes. No buscamos obtener “la imagen correcta”, sino aprender a observar, comparar y decidir si un resultado es adecuado, necesita cambios o debemos rechazarlo. También les explicaré que la IA puede equivocarse y que siempre debemos revisar sus resultados.",
+    "curriculo": "El elemento que conecta de forma más natural con esta actividad es la Competencia Digital, dentro del área de Conocimiento del Medio Natural, Social y Cultural. La actividad permite que el alumnado utilice una herramienta de IA, analice sus resultados, compare diferentes respuestas visuales y valore críticamente la información generada. De este modo, se trabaja el uso seguro, crítico y responsable de la tecnología, sin forzar la conexión con el currículo."
+  },
+  "quiz": {}
+};
+
 const EJEMPLO = {
   actividad: "¿Por qué una IA puede dar respuestas diferentes cuando le hacemos la misma pregunta varias veces?",
   contexto: "5.º o 6.º de Educación Primaria · Conocimiento del Medio · 2 sesiones",
@@ -1103,23 +1255,23 @@ const EJEMPLO = {
     { asp:"Integración crítica de la IA",
       ficha:"En la ficha, la decisión ética sobre verificación dice: «El alumnado comparará las imágenes generadas entre sí y comprobará si responden realmente a la petición realizada».",
       salto:"Ese criterio que exiges a tu alumnado aplícatelo a ti: cuenta qué comprobaste tú al generar la imagen.",
-      muestra:"Antes de dar por buena ninguna imagen comprobé si respondía a lo que había pedido. Las dos primeras eran vistosas pero mostraban elementos que no aparecían en mi petición, así que las descarté: si yo voy a pedir a mi alumnado que compare y verifique, no podía aceptar sin más el primer resultado." },
+      muestra:"Antes de dar por buena ninguna imagen comprobé si respondía a lo que había pedido. Las dos primeras eran vistosas pero mostraban elementos que no aparecían en mi petición, así que las descarté. Si voy a pedir a mi alumnado que compare y verifique, no podía aceptar sin más el primer resultado: habría enseñado con el ejemplo justo lo contrario de lo que quiero que aprendan." },
     { asp:"Transformación de la actividad",
       ficha:"La intención de partida era: «Quiero que el alumnado comprenda que la IA no siempre da la misma respuesta ni tiene siempre razón». La actividad final consiste en lanzar todos el mismo prompt y comparar los resultados.",
       salto:"Compara tu intención inicial con la actividad que ha salido. El cambio es la respuesta.",
-      muestra:"Mi idea inicial era explicar en clase que la IA puede equivocarse. Al generar yo misma varias imágenes con el mismo prompt y obtener resultados distintos cada vez, comprendí que era mucho más potente que lo comprobaran ellos. La actividad pasó de ser una explicación a ser un experimento." },
+      muestra:"Mi idea inicial era explicar en clase que la IA puede equivocarse. Al generar yo misma varias imágenes con el mismo prompt y obtener resultados distintos cada vez, comprendí que era mucho más potente que lo comprobaran ellos. La actividad pasó de ser una explicación a ser un experimento, y con ello cambió también mi papel: dejé de ser quien da la respuesta correcta para ser quien acompaña una comprobación." },
     { asp:"Combinación con conocimiento propio",
       ficha:"En la ficha consta esta observación del grupo: «todavía tiende a aceptar como válidas las respuestas o imágenes que encuentra sin comprobarlas».",
       salto:"La herramienta no conoce a tu grupo. Ese conocimiento es tuyo y es el que justifica tus decisiones.",
-      muestra:"La herramienta me ofrecía imágenes muy detalladas y llenas de elementos. Sé que mi grupo, de 11 y 12 años, se dispersa con las imágenes sobrecargadas, así que pedí versiones más simples aunque fueran menos llamativas. Esa decisión no salió de la IA: salió de lo que he observado en clase." },
+      muestra:"La herramienta me ofrecía imágenes muy detalladas y llenas de elementos. Sé que mi grupo, de 11 y 12 años, se dispersa con las imágenes sobrecargadas, así que pedí versiones más simples aunque fueran menos llamativas. Esa decisión no salió de la IA: salió de conocer a estos alumnos concretos, de haberlos visto trabajar. La herramienta puede proponer, pero no sabe quiénes son ni qué les cuesta." },
     { asp:"Justificación de lo integrado",
       ficha:"La ficha vincula la actividad con la competencia digital y con el «uso seguro, crítico y responsable de la tecnología».",
       salto:"Justifica lo que conservaste y también lo que tiraste, conectándolo con el aprendizaje que persigues.",
-      muestra:"Conservé la imagen que hacía visible la diferencia entre dos resultados, porque es justo lo que quiero que el alumnado observe. Descarté las que eran más atractivas pero ambiguas: habrían desviado la atención hacia el dibujo y no hacia la comparación, que es donde está el aprendizaje." },
+      muestra:"Conservé la imagen que hacía visible la diferencia entre dos resultados, porque es justo lo que quiero que el alumnado observe. Descarté las más atractivas pero ambiguas: habrían desviado la atención hacia el dibujo y no hacia la comparación, que es donde está el aprendizaje. Lo relevante no era la calidad estética, sino que el material sostuviera la pregunta que quiero que se hagan." },
     { asp:"Reflexión sobre el aprendizaje",
       ficha:"En la ficha, la explicación prevista para el aula dice: «usamos la IA como una herramienta para investigar y aprender, no para que haga el trabajo por nosotros».",
       salto:"Cierra con un límite concreto que hayas detectado tú, no con una frase general.",
-      muestra:"He aprendido que la calidad del resultado depende más de cómo formulo la petición que de la herramienta. También he detectado un límite: la IA no sabe si una imagen es adecuada para once años, eso solo lo sé yo. Eso ha cambiado mi forma de usarla: ahora la trato como un borrador que tengo que revisar, no como un producto acabado." }
+      muestra:"He aprendido que la calidad del resultado depende más de cómo formulo la petición que de la herramienta. También he detectado un límite que me parece importante: la IA no sabe si una imagen es adecuada para once años, ni qué pasó en clase la semana pasada, ni qué necesita el alumno que se bloquea. Eso solo lo sé yo, y no es un dato técnico, es criterio profesional construido con el trato diario. Ha cambiado mi forma de usarla: ahora la trato como un borrador que debo revisar, no como un producto acabado, y me he dado cuenta de que la parte que no puede delegarse es justamente la que da valor a mi trabajo." }
   ]
 };
 
@@ -1143,12 +1295,11 @@ const PASOS_ENT = [
   },
   {
     id:"planificar", et:"Planifica antes de crear nada",
-    previo:"Antes que nada, define los objetivos de aprendizaje y los criterios de evaluación de tu actividad. Es el mínimo para poder empezar: sin saber qué quieres que aprendan y cómo lo vas a comprobar, no puedes decidir qué imagen necesitas.",
-    que:"Después, el enunciado pide cerrar estas tres decisiones, en este orden.",
-    lista:[
-      "Definir el alumnado al que va dirigido el material educativo.",
-      "Concretar el tema que se quiere trabajar en el aula.",
-      "Especificar el tipo de tarea que se propondrá al alumno, integrando la imagen creada con IA."
+    que:"Antes de abrir ninguna herramienta, cierra estas tres decisiones, en este orden.",
+    numerada:[
+      { t:"Alumnado", d:"Definir la edad, el nivel formativo, los conocimientos previos y las necesidades especiales del grupo." },
+      { t:"Tema", d:"Concretar el contenido curricular, el concepto clave o la unidad didáctica que se va a trabajar." },
+      { t:"Tarea y objetivos", d:"La tarea: qué actividad concreta hará el estudiante usando la imagen creada con inteligencia artificial. Los objetivos: qué competencias, saberes o destrezas específicas asimilará el alumno al realizar dicha tarea." }
     ],
     cita:"«Antes de empezar a crear la actividad debes realizar la planificación.»",
     citaF:"Enunciado de la actividad",
@@ -1206,7 +1357,7 @@ const PASOS_ENT = [
       { d:"Va al ePortfolio, completo", q:"La ficha entera como evidencia enlazada o embebida, y el diario de decisiones. El ePortfolio tiene extensión libre y se valora la trazabilidad del proceso, así que es su sitio natural." },
       { d:"No va a ninguna parte", q:"Las explicaciones del marco que la ficha incluye para formarte a ti. Son andamiaje de trabajo, no contenido evaluable de esta actividad." }
     ],
-    ojo:"El Taller AILit no es una inteligencia artificial y no genera tu actividad: te guía en la toma de decisiones a partir de un marco publicado, y no sustituye en ningún caso a tu criterio docente. Por eso mismo, haberlo usado no se documenta en la tabla técnica: ahí va únicamente la herramienta de IA con la que generaste la imagen o los recursos. Si citas el marco, hazlo en APA como cualquier otra fuente, con la referencia que aparece en «Qué aporta y qué no».",
+    ojo:"El ejemplo que puedes abrir aquí es un ejercicio de andamiaje, no un modelo de la Actividad 1. El Taller AILit tampoco es una inteligencia artificial y no genera tu actividad: te guía en la toma de decisiones a partir de un marco publicado, y no sustituye en ningún caso a tu criterio docente. Por eso mismo, haberlo usado no se documenta en la tabla técnica: ahí va únicamente la herramienta de IA con la que generaste la imagen o los recursos. Si citas el marco, hazlo en APA como cualquier otra fuente, con la referencia que aparece en «Qué aporta y qué no».",
     crit:[2,5]
   },
   {
@@ -1219,7 +1370,7 @@ const PASOS_ENT = [
     ],
     cita:"«La elección de plataforma es libre — Genially, Sites, Notion, Wix, un blog o cualquier otra— siempre que el resultado cumpla los requisitos de la rúbrica de cada actividad y sea accesible mediante un enlace único y funcional.»",
     citaF:"Indicaciones de la asignatura",
-    ojo:"Si usas la plantilla de Genially, las tablas rellenables de esta actividad están en la página 4, salvo que hayas añadido, cambiado o suprimido algo en las páginas anteriores.",
+    captura:true,
     ojo2:"El formato de tabla no es obligatorio: la parte reflexiva puede presentarse en tabla, en texto seguido o en cualquier disposición visual. Lo exigible es que aparezcan todos los elementos.",
     crit:[6,7]
   },
@@ -1267,6 +1418,9 @@ const FUENTES_ENT = [
 // ---------------------------------------------------------------------------
 // Estado propio de esta pestaña
 // ---------------------------------------------------------------------------
+// Captura de la plantilla de Genially con las dos tablas señaladas.
+const CAPTURA_GENIALLY = "data:image/jpeg;base64,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ze/YYk8j9V3LEirvV697yZX5fhTq9e95Mr8vwpqQze/YYk8j9V3LEirvV697yZX5fhTq9e95Mr8vwpqQze/YYk8j9V3LEirvV697yZX5fhTq9e95Mr8vwpqQze/YYk8j9V3LEirvV697yZX5fhTq9e95Mr8vwpqQze/YYk8j9V3LEirvV697yZX5fhTq9e95Mr8vwpqQze/YYk8j9V3LEirvV697yZX5fhTq9e95Mr8vwpqQze/YYk8j9V3LEirvV697yZX5fhTq9e95Mr8vwpqQze/YYk8j9V3LEirvV697yZX5fhTq9e95Mr8vwpqQze/YYk8j9V3LEirvV697yZX5fhTq9e95Mr8vwpqQze/YYk8j9V3LEirvV697yZX5fhTq9e95Mr8vwpqQze/YYk8j9V3LEirvV697yZX5fhTq9e95Mr8vwpqQze/YYk8j9V3LEo7NZmjhq3TX5wzX7DBxe8+hreZKi5dmrkrC120uXAP8LmNP5hq2cPsvjMXP9JZG+e522LDzI/8AAnl+ClRpra5X8vyQ5VZbIxt832X4NbB0rmQyhzeYjMDgzcp1CdTAw83O/vn+Q4KyoipObm7mlOmoKwREVC4REQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQH//2Q==";
+
 const ENT = { tec:{}, ref:{}, hecho:{} };
 
 function setEnt(g,k,v){ ENT[g][k]=v; if(typeof autoguardar==="function") autoguardar(); }
@@ -1335,10 +1489,16 @@ function pintarEntrega(){
         ${p.pregunta?`<p class="pregunta-ent">${esc(p.pregunta)}</p>`:""}
         ${p.previo?`<div class="aviso marco"><b>Punto de partida mínimo</b>${esc(p.previo)}</div>`:""}
         <p>${esc(p.que)}</p>
+        ${p.numerada?`<ol class="lista-num">${p.numerada.map(x=>`<li><b>${esc(x.t)}</b><span>${esc(x.d)}</span></li>`).join("")}</ol>`:""}
         ${p.lista?`<ul class="lista-ent">${p.lista.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:""}
         ${p.reparto?`<div class="rejilla3 reparto">${p.reparto.map(r=>`
           <div class="bloque-amb"><div class="tit" style="background:var(--ges);color:#fff">${esc(r.d)}</div>
           <div class="txt">${esc(r.q)}</div></div>`).join("")}</div>`:""}
+        ${p.captura?`<div class="captura">
+          <p class="cap-tit">En la plantilla de Genially, las tablas de esta actividad están en la <b>página 4</b>, salvo que hayas añadido, cambiado o suprimido algo en las páginas anteriores.</p>
+          <img src="${CAPTURA_GENIALLY}" alt="Página 4 de la plantilla: botones «Descripción técnica del proceso de uso de la IA» y «Justificación reflexiva, aprendizaje y pensamiento crítico»">
+          <p class="cap-pie">Consulta la plantilla reutilizable en el aula virtual.</p>
+        </div>`:""}
         ${p.tabla?filasTabla(p.tabla):""}
         ${p.ejemplo?bloqueEjemplo():""}
         ${p.checks?`<ul class="lista-check">${p.checks.map((c,j)=>`
@@ -1354,18 +1514,30 @@ function pintarEntrega(){
       </div>
     </div>`).join("");
 
-  const rub = RUBRICA.map(c=>`
-    <div class="crit">
-      <div class="crit-cab"><b>${c.n}. ${esc(c.t)}</b>
+  const niveles = c => [
+    {k:"n4", et:"Nivel 4 · sobresaliente"},
+    {k:"n3", et:"Nivel 3 · notable"},
+    {k:"n2", et:"Nivel 2 · aprobado"},
+    {k:"n1", et:"Nivel 1 · suspenso"}
+  ].filter(x=>c[x.k]).map(x=>`
+      <div class="niv ${x.k}"><span>${esc(x.et)}</span><p>${esc(c[x.k])}</p></div>`).join("");
+
+  const rub = `<div class="rubrica">
+    <div class="rub-cab"><span>Criterio</span><span>Peso</span></div>
+    ${RUBRICA.map(c=>`
+    <details class="crit">
+      <summary>
+        <span class="crit-n">${c.n}</span>
+        <span class="crit-t">${esc(c.t)}<em>${esc(c.donde)}</em></span>
         <span class="peso">${c.p.toString().replace(".",",")} pt</span>
-        <span class="donde">${esc(c.donde)}</span></div>
-      <p class="n4"><b>Nivel 4, sobresaliente.</b> ${esc(c.n4)}</p>
-      ${c.nota?`<p class="tip">${esc(c.nota)}</p>`:""}
-      <details><summary>Ver los demás niveles</summary>
-        ${c.n3?`<p><b>Nivel 3.</b> ${esc(c.n3)}</p>`:""}
-        <p><b>Nivel 2.</b> ${esc(c.n2)}</p>
-        <p><b>Nivel 1.</b> ${esc(c.n1)}</p></details>
-    </div>`).join("");
+      </summary>
+      <div class="crit-cuerpo">
+        ${niveles(c)}
+        ${c.nota?`<p class="tip">${esc(c.nota)}</p>`:""}
+      </div>
+    </details>`).join("")}
+    <div class="rub-pie"><span>Total</span><span class="peso total">10 pt</span></div>
+  </div>`;
 
   document.getElementById("v-entrega").innerHTML = `
   <h2 id="t-entrega" style="position:absolute;left:-9999px">Entrega de la Actividad 1</h2>
@@ -1389,7 +1561,7 @@ function pintarEntrega(){
   ${pasos}
 
   <div class="tarjeta"><div class="cab"><h2>La rúbrica, criterio por criterio</h2>
-    <p class="pista">Siete criterios, 10 puntos en total</p></div>
+    <p class="pista">Siete criterios, 10 puntos en total. Pulsa cada uno para ver sus niveles de logro</p></div>
     <div class="cuerpo">${rub}
       <div class="aviso"><b>Ortografía</b>${esc(RUBRICA_PENAL)}</div>
     </div></div>
@@ -1401,17 +1573,71 @@ function pintarEntrega(){
   pintarProgresoEnt();
 }
 
+function fichaEjemplo(){
+  if(typeof htmlFicha!=="function") return "";
+  const copia = snapshot();
+  restaurar(EJEMPLO_DATOS);
+  let h=""; try{ h = htmlFicha(); }catch(e){ h=""; }
+  restaurar(copia);
+  return h;
+}
+function htmlEjemplo(){
+  return `
+  <div class="franja-aviso">
+    <b>Esto no es un ejemplo de la Actividad 1</b>
+    Lo que viene a continuación es un <b>ejercicio de andamiaje voluntario</b>: una ficha de diseño de una actividad de aula anclada en el Marco AILit. No es el trabajo que tienes que entregar, ni un modelo de cómo debe ser tu entrega.
+  </div>
+  <div class="rejilla2 contraste">
+    <div class="con-caja no">
+      <span class="con-et">Esto es lo que estás viendo</span>
+      <b>Ejercicio de andamiaje</b>
+      <p>Una ficha del taller: dimensión, competencia, nivel de desempeño y decisiones de diseño. Sirve para pensar mejor tu actividad y para nutrir tu reflexión. Es voluntario y no se evalúa.</p>
+    </div>
+    <div class="con-caja si">
+      <span class="con-et">Esto es lo que debes entregar</span>
+      <b>Actividad 1</b>
+      <p>Un PDF de un máximo de 4 páginas con la planificación, la imagen creada con IA y la tarea para tu alumnado, más el ePortfolio con las dos tablas. Es lo que describen los pasos de esta guía.</p>
+    </div>
+  </div>
+
+  <div class="ej-parte"><span class="ej-num">1</span>
+    <b>El punto de partida: la ficha completa que genera el taller</b>
+    <p>Esto es lo que obtienes al terminar el itinerario voluntario, adaptado a un nivel, una dimensión y una competencia concretas. No se entrega, ni entera ni resumida, como si fuera la actividad: es materia prima para fundamentar la tuya y para escribir tu reflexión.</p>
+  </div>
+  <div class="ej-ficha-caja"><span class="marca-andamiaje">Material de apoyo · no es la entrega</span>${fichaEjemplo()}</div>
+  <p class="pista-campo">Ficha real generada con la pestaña «Taller AILit (voluntario)». Desplázate dentro del recuadro para verla entera.</p>
+
+  <div class="ej-parte"><span class="ej-num">2</span>
+    <b>El salto: de la ficha a la parte reflexiva de la actividad</b>
+    <p>La ficha describe decisiones de diseño. La tabla reflexiva pregunta por tu uso de la IA y por lo que has aprendido. Estas cinco filas muestran cómo se pasa de una cosa a la otra sin quedarse en la descripción. Las respuestas de muestra están redactadas por esta herramienta: no las copies, obsérvalas.</p>
+  </div>
+  ${EJEMPLO.filas.map(f=>`
+    <div class="ej-fila">
+      <b>${esc(f.asp)}</b>
+      <p class="ej-src"><span>Lo que tienes en la ficha</span>${esc(f.ficha)}</p>
+      <p class="ej-salto"><span>El salto que hay que dar</span>${esc(f.salto)}</p>
+      <p class="ej-muestra"><span>Respuesta de muestra</span>${esc(f.muestra)}</p>
+    </div>`).join("")}`;
+}
+function alternarEjemplo(){
+  const c=document.getElementById("cajaEjemplo"), b=document.getElementById("btnEjemplo");
+  if(!c||!b) return;
+  if(c.hasAttribute("hidden")){
+    if(!c.dataset.listo){ c.innerHTML=htmlEjemplo(); c.dataset.listo="1"; }
+    c.removeAttribute("hidden"); b.textContent="Ocultar el ejemplo";
+    b.setAttribute("aria-expanded","true");
+  }else{
+    c.setAttribute("hidden",""); b.textContent="Ver el ejemplo completo";
+    b.setAttribute("aria-expanded","false");
+  }
+}
 function bloqueEjemplo(){
-  return `<details class="ejemplo"><summary>Ver un ejemplo resuelto: de la ficha del taller a la tabla reflexiva</summary>
-    <p class="pista-campo">Ejemplo a partir de una ficha real generada con la parte voluntaria: «${esc(EJEMPLO.actividad)}» (${esc(EJEMPLO.contexto)}). Las respuestas de muestra están redactadas por esta herramienta para ilustrar el salto. No las copies: sirven para ver la diferencia entre describir y reflexionar.</p>
-    ${EJEMPLO.filas.map(f=>`
-      <div class="ej-fila">
-        <b>${esc(f.asp)}</b>
-        <p class="ej-ficha"><span>Lo que tienes en la ficha</span>${esc(f.ficha)}</p>
-        <p class="ej-salto"><span>El salto que hay que dar</span>${esc(f.salto)}</p>
-        <p class="ej-muestra"><span>Respuesta de muestra</span>${esc(f.muestra)}</p>
-      </div>`).join("")}
-  </details>`;
+  return `<div class="ej-bloque">
+    <button type="button" id="btnEjemplo" class="btn-ejemplo" aria-expanded="false"
+      aria-controls="cajaEjemplo" onclick="alternarEjemplo()">Ver el ejemplo completo</button>
+    <p class="pista-campo" style="margin-top:8px">Primero verás la ficha completa que genera el taller y después cómo se transforma en la parte reflexiva de tu entrega.</p>
+    <div id="cajaEjemplo" class="ej-caja" hidden></div>
+  </div>`;
 }
 
 // ---------------------------------------------------------------------------
